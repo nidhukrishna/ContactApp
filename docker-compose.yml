@@ -1,0 +1,45 @@
+# Contact Management Application - Docker Compose
+# Created by Sharvesh S
+
+version: "3.8"
+
+services:
+  # Backend API Service
+  contact-management-api:
+    build:
+      context: ./contactapi-main
+      dockerfile: Dockerfile
+    container_name: contact-management-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    volumes:
+      - contact_uploads:/app/uploads
+    networks:
+      - contact-network
+    restart: unless-stopped
+
+  # Frontend Service
+  contact-management-frontend:
+    build:
+      context: ./contactapp-main
+      dockerfile: Dockerfile
+    container_name: contact-management-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - contact-management-api
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080
+    networks:
+      - contact-network
+    restart: unless-stopped
+
+volumes:
+  contact_uploads:
+    driver: local
+
+networks:
+  contact-network:
+    driver: bridge

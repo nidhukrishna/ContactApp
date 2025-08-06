@@ -1,0 +1,43 @@
+# Contact Management Application Configuration
+# Created by Sharvesh S
+#
+# This is the development configuration using H2 in-memory database
+# For production deployment, replace with your preferred database configuration
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:contactdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mvc:
+    throw-exception-if-no-handler-found: true
+    async:
+      request-timeout: 30000
+
+server:
+  port: 8080
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
