@@ -2,7 +2,7 @@
 
 The **Contact Management Full-Stack Application** is a modern, feature-rich system for managing personal and professional contacts, built to demonstrate the power of combining modern web technologies with enterprise-grade backend frameworks. It leverages a responsive React frontend alongside a robust Spring Boot backend, delivering a seamless user experience with features such as CRUD operations, photo management, contact search, and secure REST APIs. This application uses H2 in-memory database for development and is designed for local development and testing, making it an ideal learning project for full-stack development.
 
-**Created by Sharvesh S**
+**Created by Nidhukrishna G**
 
 ## Table of Contents
 
@@ -107,8 +107,8 @@ _Drag and drop photo upload with image preview and management_
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/S-Sharvesh/Contact-Management-App.git
-   cd Contact-Management-App
+   git clone https://github.com/nidhukrishna/ContactApp.git
+   cd ContactApp
    ```
 
 2. **Backend Setup**
@@ -260,8 +260,8 @@ Ensure that you have Java 21 installed on your local machine. If not, follow the
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/S-Sharvesh/Contact-Management-App.git
-cd Contact-Management-App
+git clone https://github.com/nidhukrishna/ContactApp.git
+cd ContactApp
 cd contactapi-main
 ```
 
@@ -287,7 +287,7 @@ The application comes pre-configured with H2 in-memory database settings in `src
 
 ```yaml
 # Contact Management Application Configuration
-# Created by Sharvesh S
+# Created by Nidhukrishna G
 spring:
   datasource:
     url: jdbc:h2:mem:contactdb
@@ -394,8 +394,8 @@ Feel free to add more tests as needed to ensure the reliability and correctness 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/S-Sharvesh/Contact-Management-App.git
-cd Contact-Management-App/contactapp-main
+git clone https://github.com/nidhukrishna/ContactApp.git
+cd ContactApp/contactapp-main
 ```
 
 ### 2. Install Dependencies
@@ -549,10 +549,10 @@ For support and questions:
 
 Thank you for checking out the **Contact Management Full-Stack Application!** Feel free to use this project for learning or development purposes.
 
-Created and customized by **[Sharvesh S](https://github.com/S-Sharvesh)** - 2025
+Created and customized by **[Nidhukrishna G](https://github.com/nidhukrishna)** - 2025
 
-For more projects and updates, visit my GitHub profile: **[@S-Sharvesh](https://github.com/S-Sharvesh)**
 
 ---
 
 **[⬆ Back to Top](#contact-management-full-stack-application)**
+
